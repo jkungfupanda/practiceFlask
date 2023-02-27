@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <form method="POST" action="{{ url_for('new_employee') }}">
+            <h2>New Employee</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id">
+            <input type="submit" value="Add Employee">
+        </form>
+        <form method="POST" action="{{ url_for('lookup_employee') }}">
+            <h2>Employee Lookup</h2>
+            <label for="employee_id">Employee ID:</label>
+            <input type="text" id="employee_id" name="employee_id">
+            <input type="submit" value="Lookup Employee">
+        </form>
+        <form method="POST" action="{{ url_for('query_users') }}">
+            <h2>Query All Users</h2>
+            <input type="submit" value="Query ALL users">
+        </form>
+    </div>
+</body>
+</html>
